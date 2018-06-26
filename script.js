@@ -2,7 +2,7 @@ var numpart = 0;
 var numcol = 0;
 var maxjug = 4;
 var numjug;
-var vecpart = ["blau", "verd", "vermell", "groc","Peu dret","Peu esquerre","Ma dreta", "Ma esquerra", "Cap","Genoll esquerre","Genoll dret", "Cul"];
+var vecpart = ["azul", "verde", "rojo", "amarillo","Pie derecho","Pie izquierdo","Mano derecha", "Mano izquierda", "Cabeza","Rodilla izquierda","Rodilla derecha", "Culo", "Pecho derecho", "Pecho izquierdo", "Genitales"];
 var vecjug = ["Jugador 1", "Jugador 2", "Jugador 3", "Jugador 4", "Jugador 5", "Jugador 6", "Jugador 7", "Jugador 8"];
 
 function Next() {
@@ -54,11 +54,11 @@ function Spin() {
     numpart = Math.floor(Math.random() * (8 - 4)) + 4;
     numcol = Math.floor(Math.random() * (4 - 0)) + 0;
   } if (x == "mode2"){
-    numpart = Math.floor(Math.random() * (12 - 4)) + 4;
-    numcol = Math.floor(Math.random() * (4 - 0)) + 0;
+    numpart = Math.floor(Math.random() * (11 - 4)) + 4;
+    numcol = Math.floor(Math.random() * (11 - 0)) + 0;
     } if (x == "mode3"){
-      numpart = Math.floor(Math.random() * (12 - 4)) + 4;
-      numcol = Math.floor(Math.random() * (12 - 0)) + 0;
+      numpart = Math.floor(Math.random() * (15 - 4)) + 4;
+      numcol = Math.floor(Math.random() * (15 - 0)) + 0;
       if (numcol > 4){
         var numjug2 = Math.floor(Math.random() * ((maxjug - 1) - 0)) + 0;
       }
@@ -68,7 +68,7 @@ function Spin() {
   if (numcol < 5) {
     document.getElementById('accio-text').innerHTML = vecpart[numpart] + " a " + vecpart[numcol];
   } else if (numjug2 == numjug){
-    document.getElementById('accio-text').innerHTML = vecpart[numpart] + " a " + vecpart[numcol] + " del Jugador que esculli";
+    document.getElementById('accio-text').innerHTML = vecpart[numpart] + " a " + vecpart[numcol] + " del Jugador que escoja";
   } else {
     document.getElementById('accio-text').innerHTML = vecpart[numpart] + " a " + vecpart[numcol] + " del " + vecjug[numjug2];
   }
