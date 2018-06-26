@@ -1,0 +1,149 @@
+body{
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+}
+
+.menu-hidden{
+  background-color: rgba(0, 0, 0, 0) !important;
+  transform: translateY(-100vh);
+  pointer-events: none;
+}
+p {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+      font-weight: bold;
+
+}
+
+h2{
+  margin: 0 0 1em;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+h1{
+  color: #fff;
+  margin: 0 auto 0.5em;
+  text-align: center;
+  font-size: 2.5em;
+
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+  opacity: 0.9;
+  text-shadow: 0 1px #ccc, 0 2px #ccc, 0 3px #ccc;
+}
+
+button[name="good"]{
+  background-color: #3fc47a;
+  box-shadow: 0 0.5em 0 #30955d;
+}
+
+button[name="neutral"]{
+  background-color:  #3498DB;
+  box-shadow: 0 0.5em 0 #1a53ff;
+}
+
+button[name="bad"]{
+  background-color: #f45353;
+  box-shadow: 0 0.5em 0 #b14141;
+}
+
+button{
+  margin: 0.5em auto 0;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  padding: 0.75em 2em;
+  color: #ffffff;
+  transition: all 50ms ease-out;
+}
+
+.likebutton{
+  margin: 0.5em auto 0;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  padding: 0.75em 2em;
+  transition: all 50ms ease-out;
+  border-style: solid;
+    border-color: #3498DB;
+}
+
+.menu-gen{
+  margin: 1em;
+  padding: 2em;
+  width: 90%;
+  box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.2);
+  background-color: #fefefe;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-row{
+  margin: 1em;
+}
+
+
+#menu{
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(45, 42, 37, 0.4);
+  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+}
+
+#game{
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(45, 42, 37, 0.4);
+  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+}
+
+#jugadors{
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(45, 42, 37, 0.4);
+  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+}

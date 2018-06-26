@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>TwistYou</title>
+    <meta name="description" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+<body>
+    <section id="menu">
+      <div>
+        <h1>TwistYou</h1>
+      </div>
+      <div class="menu-gen">
+        <div class="menu-row">
+          <div>
+            <p> Select Mode </p>
+          </div>
+          <select id = "mode-select" name="cars" class="likebutton">
+            <option value="mode1">Clasic</option>
+            <option value="mode2">Complete</option>
+            <option value="mode3">Extrem</option>
+          </select>
+        </div>
+
+        <div class="menu-row">
+          <div>
+            <p> Number of Players (2-8) </p>
+          </div>
+          <div align="center">
+            <label id="numero-jugadors" class = "likebutton"> 4 </label>
+
+          </div>
+          <div align="center">
+            <button onclick="RestaJugadors();" type="button" name="neutral"><</button>
+            <button onclick="SumaJugadors();" type="button" name="neutral">></button>
+          </div>
+        </div>
+        <div>
+          <button onclick="Next();" type="button" name="good">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="jugadors" class="menu-hidden">
+      <h2>Selecciona jugadors</h2>
+      <div class="menu-gen">
+        <div id="linea"></div>
+        <div class="menu-row">
+            <button onclick="Play();" type="button" name="good">Play</button>
+        </div>
+        <div class="menu-row">
+          <button onclick="Back1();" type="button" name="bad">Back</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="menu-hidden">
+      <h2>Clica per girar</h2>
+      <div class="menu-gen">
+        <div class="menu-row">
+          <p id="jugador-text"> </p>
+          <p id="accio-text"> </p>
+        </div>
+        <div class="menu-row">
+            <button onclick="Spin();" type="button" name="good">Spin</button>
+        </div>
+        <div class="menu-row">
+            <button onclick="SpinImp();" type="button" name="neutral">Imposible</button>
+        </div>
+        <div class="menu-row">
+          <button onclick="Back2();" type="button" name="bad">Back</button>
+        </div>
+    </section>
+<script type="text/javascript" src="script.js"></script>
+</body></html>
