@@ -17,7 +17,7 @@ function Play() {
   document.getElementById('game').classList.remove("menu-hidden");
   var i;
   for (i = 1; i <= maxjug; i++) {
-    vecjug[i-1] = document.getElementById("jug" + i).value;
+    vecjug[i-1] = document.getElementById("jug" + i).value || vecjug[i-1];
   }
 
   Spin();
@@ -36,12 +36,9 @@ function Back2() {
 }
 
 function LlistaJugadors() {
-    var i;
-    for (i = 1; i <= maxjug; i++) {
-      $("#linea").append("<div class = 'menu-row'>" +
-      "<label>" + i + " : <label>" +
-      "<input type='text' id='jug" + i + "' value='Jugador " + i + "'>"+
-      "</div>");
+  document.getElementById('linea').innerHTML = "";
+    for (let i = 1; i <= maxjug; i++) {
+      document.getElementById('linea').innerHTML += `<div class = 'menu-row'><label for="jug${i}">${i}: </label><input type="text" id="jug${i}" class="likebutton" placeholder="Jugador ${i}"></div>`;
     }
 }
 function SpinImp(){
@@ -81,18 +78,21 @@ function Spin() {
 }
 
 function SumaJugadors() {
-if (maxjug < 8){
-  ++maxjug;
-  document.getElementById('numero-jugadors').innerHTML =  maxjug;
-}
+  if (maxjug < 8){
+    ++maxjug;
+    document.getElementById('numero-jugadors').value =  maxjug;
+  }
 }
 
 function RestaJugadors() {
   if (maxjug > 2){
     --maxjug;
-    document.getElementById('numero-jugadors').innerHTML =  maxjug;
+    document.getElementById('numero-jugadors').value =  maxjug;
   }
+}
 
+function SetJugadors(n) {
+  maxjug = n;
 }
 
 function drop() {

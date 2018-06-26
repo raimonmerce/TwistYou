@@ -1,40 +1,43 @@
 body{
   margin: 0;
-  font-family: 'Nunito', sans-serif;
-  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .menu-hidden{
-  background-color: rgba(0, 0, 0, 0) !important;
-  transform: translateY(-100vh);
-  pointer-events: none;
+  display: none;
 }
-p {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-      font-weight: bold;
-
+p{
+  text-align: center;
+  margin: 0;
 }
 
 h2{
-  margin: 0 0 1em;
+  margin: 1em 0 0.5em;
   text-align: center;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.15em;
 }
 
+header{
+  background-color: #b14141;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  color: white;
+  box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.7);
+  height: 4em;
+}
 h1{
-  color: #fff;
-  margin: 0 auto 0.5em;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0.5em 0;
+  line-height: 1;
+  text-shadow: 0 0.05em 0.2em rgba(0, 0, 0, 0.5);
+  font-weight: bold;
   text-align: center;
-  font-size: 2.5em;
-
-  letter-spacing: 0.5em;
-  padding-left: 0.5em;
-  opacity: 0.9;
-  text-shadow: 0 1px #ccc, 0 2px #ccc, 0 3px #ccc;
+  font-size: 2em;
+  letter-spacing: 0.25em;
+  padding-left: 0.25em;
 }
 
 button[name="good"]{
@@ -53,7 +56,7 @@ button[name="bad"]{
 }
 
 button{
-  margin: 0.5em auto 0;
+  margin: 0.5em;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.5em;
@@ -72,78 +75,56 @@ button{
   text-transform: uppercase;
   letter-spacing: 0.5em;
   font-weight: bold;
-  border: none;
   outline: none;
   border-radius: 0.5em;
-  padding: 0.75em 2em;
+  padding: 1em;
   transition: all 50ms ease-out;
-  border-style: solid;
-    border-color: #3498DB;
+  border: solid #3498DB medium;
+  text-align: center;
 }
 
-.menu-gen{
-  margin: 1em;
-  padding: 2em;
-  width: 90%;
-  box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.2);
+
+section{
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   background-color: #fefefe;
-  border-radius: 0.5em;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
+  transition: transform 1s 0.4s ease-out;
+  padding: 4em 1em 1em;
 }
 
-.menu-row{
-  margin: 1em;
+#numero-jugadors{
+  width: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.25em 0;
+  letter-spacing: 0;
 }
 
-
-#menu{
-  height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(45, 42, 37, 0.4);
-  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+.fletxa{
+  background-color: transparent !important;
+  color: black;
+  opacity: 0.8;
+  box-shadow: none !important;
+  padding: 0.25em 0.5em;
+  font-size: 2em;
+  transform-origin: center center;
+  border: #1a53ff  thin;
+  letter-spacing: 0;
+  border-radius: 0;
+  margin: 0;
 }
-
-#game{
-  height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(45, 42, 37, 0.4);
-  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+.fletxa:hover{
+  transform: scale(1.5);
 }
-
-#jugadors{
-  height: 100vh;
-  width: 100vw;
-  box-sizing: border-box;
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(45, 42, 37, 0.4);
-  transition: transform 1s 0.4s ease-out, background-color 0.5s ease-out;
+#jugador-text{
+  font-size: 1.5em;
+  font-weight: normal;
+}
+#accio-text{
+  font-size: 2em;
+  font-weight: lighter;
 }
