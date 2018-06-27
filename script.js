@@ -2,7 +2,7 @@ var numpart = 0;
 var numcol = 0;
 var maxjug = 4;
 var numjug;
-var vecpart = ["Hitler", "verde", "rojo", "amarillo","Pie derecho","Pie izquierdo","Mano derecha", "Mano izquierda", "Cabeza","Rodilla izquierda","Rodilla derecha", "Culo", "Pecho derecho", "Pecho izquierdo", "Genitales"];
+var vecpart = ["Azul", "verde", "rojo", "amarillo","Pie derecho","Pie izquierdo","Mano derecha", "Mano izquierda", "Cabeza","Rodilla izquierda","Rodilla derecha", "Culo", "Pecho derecho", "Pecho izquierdo", "Genitales"];
 var vecjug = ["Jugador 1", "Jugador 2", "Jugador 3", "Jugador 4", "Jugador 5", "Jugador 6", "Jugador 7", "Jugador 8"];
 
 function Next() {
