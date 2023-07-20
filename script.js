@@ -100,6 +100,7 @@ function drop() {
 }
 
 window.onclick = function(event) {
+  console.log("HERE")
   if (!event.target.matches('.dropbtn')) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
