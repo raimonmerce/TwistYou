@@ -12,7 +12,7 @@
 
 <body>
   <header><h1>TwistYou</h1></header>
-    <section id="options">
+    <section id="options" class="top-section">
       <div>
         <h2 style="border-top: 100%;">Opciones</h2>
         <div>
@@ -40,33 +40,37 @@
           <option value="8">8</option>
         </select>
       </div>
-      <div class="bottom">
-        <button  id="GoToPlayers" type="button" name="good">Next</button>
-      </div>
     </section>
 
-    <section id="jugadors" class="menu-hidden">
+    <section id="jugadors" class="menu-hidden top-section">
       <div>
         <h2>¿Cómo os llamais?</h2>
         <div id="linea"></div>
       </div>
-      <div class="bottom">
-        <button id="GoToGame" type="button" name="good">Play</button>
-        <button id="BackToOptions" type="button" name="bad">Back</button>
-      </div>
     </section>
 
-    <section id="game" class="menu-hidden">
+    <section id="game" class="menu-hidden top-section">
       <div>
         <h2 id="jugador-text">Tu</h2>
         <p id="accio-text"></p>
       </div>
-      <div class="bottom">
+
+    </section>
+
+    <footer>
+      <section id="optionsf">
+        <button  id="GoToPlayers" type="button" name="good">Next</button>
+      </section>
+      <section id="jugadorsf" class="menu-hidden">
+        <button id="GoToGame" type="button" name="good">Play</button>
+        <button id="BackToOptions" type="button" name="bad">Back</button>
+      </section>
+      <section id="gamef" class="menu-hidden">
         <button id="Spin" type="button" name="good" >Spin</button>
         <button id="SpinImp" type="button" name="neutral">Imposible</button>
         <button id="Back2" type="button" name="bad">Back</button>
-      </div>
-    </section>
+      </section>
+    </footer>
     
     <script type="module" src="Game.js"></script>
     <script type="module" src="Player.js"></script>

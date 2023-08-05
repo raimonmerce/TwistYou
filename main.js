@@ -7,7 +7,9 @@ let players = []
 
 function GoToPlayers() {
   document.getElementById('options').classList.add("menu-hidden");
+  document.getElementById('optionsf').classList.add("menu-hidden");
   document.getElementById('jugadors').classList.remove("menu-hidden");
+  document.getElementById('jugadorsf').classList.remove("menu-hidden");
   currentPlayers = parseInt(document.getElementById('mode-select').value);
   for (let i = 1; i <= currentPlayers; i++) {  
     document.getElementById('linea').innerHTML += `<div id="djug${i}" class = 'menu-row'><input type="text" id="ijug${i}" class="dropdown" placeholder="Player ${i}"></div>`;
@@ -16,7 +18,9 @@ function GoToPlayers() {
 
 function GoToGame() {
   document.getElementById('jugadors').classList.add("menu-hidden");
+  document.getElementById('jugadorsf').classList.add("menu-hidden");
   document.getElementById('game').classList.remove("menu-hidden");
+  document.getElementById('gamef').classList.remove("menu-hidden");
   players = []
   for (let i = 1; i <= currentPlayers; i++) {
     let namePlayer = document.getElementById("ijug" + i).value || document.getElementById("ijug" + i).placeholder;
@@ -34,8 +38,11 @@ function GoToGame() {
 
 function BackToOptions() {
   document.getElementById('jugadors').classList.add("menu-hidden");
+  document.getElementById('jugadorsf').classList.add("menu-hidden");
   document.getElementById('game').classList.add("menu-hidden");
+  document.getElementById('gamef').classList.add("menu-hidden");
   document.getElementById('options').classList.remove("menu-hidden");
+  document.getElementById('optionsf').classList.remove("menu-hidden");
   document.getElementById('linea').innerHTML = "";
 }
 
