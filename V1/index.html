@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title>TwistYou</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300,400,700" rel="stylesheet">  
+    <meta name="theme-color" content="#b14141">
+  </head>
+
+<body>
+  <header><h1>TwistYou</h1></header>
+    <section id="menu">
+      <h2>Modo</h2>
+      <select id="mode-select" name="modes" class="likebutton">
+        <option value="mode1">Clasico</option>
+        <option value="mode2">Completo</option>
+        <option value="mode3">Extremo</option>
+      </select>
+
+      <h2>Jugadores</h2>
+      <div>
+        <button onclick="RestaJugadors();" type="button" name="neutral" class="fletxa"><</button>
+        <input id="numero-jugadors" type="number" class="likebutton" onchange="SetJugadors(this.value);" value="4" min="2" max="8">
+        <button onclick="SumaJugadors();" type="button" name="neutral" class="fletxa">></button>
+      </div>
+      <button onclick="Next();" type="button" name="good" style="margin-top: 5em;">Next</button>
+    </section>
+
+    <section id="jugadors" class="menu-hidden">
+      <h2>¿Cómo os llamais?</h2>
+      <div id="linea"></div>
+      <button onclick="Play();" type="button" name="good" style="margin-top: 5em;">Play</button>
+      <button onclick="Back1();" type="button" name="bad">Back</button>
+    </section>
+
+    <section id="game" class="menu-hidden">
+      <h2 id="jugador-text">Tu</h2>
+      <p id="accio-text"></p>
+      <button onclick="Spin();" type="button" name="good"  style="margin-top: 5em;">Spin</button>
+      <button onclick="SpinImp();" type="button" name="neutral">Imposible</button>
+      <button onclick="Back2();" type="button" name="bad">Back</button>
+    </section>
+<script type="text/javascript" src="script.js"></script>
+</body></html>

@@ -12,36 +12,66 @@
 
 <body>
   <header><h1>TwistYou</h1></header>
-    <section id="menu">
-      <h2>Modo</h2>
-      <select id="mode-select" name="modes" class="likebutton">
-        <option value="mode1">Clasico</option>
-        <option value="mode2">Completo</option>
-        <option value="mode3">Extremo</option>
-      </select>
-
-      <h2>Jugadores</h2>
+    <section id="options">
       <div>
-        <button onclick="RestaJugadors();" type="button" name="neutral" class="fletxa"><</button>
-        <input id="numero-jugadors" type="number" class="likebutton" onchange="SetJugadors(this.value);" value="4" min="2" max="8">
-        <button onclick="SumaJugadors();" type="button" name="neutral" class="fletxa">></button>
+        <h2 style="border-top: 100%;">Opciones</h2>
+        <div>
+          <label class="switch">
+            Alcohol
+            <input type="checkbox" id="checkAlcohol">
+            <span class="slider"></span>
+          </label>
+
+          <label class="switch">
+            Extreme
+            <input type="checkbox" id="checkExtreme">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <h2>Jugadores</h2>
+        <select id="mode-select" name="modes" class="dropdown">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
       </div>
-      <button onclick="Next();" type="button" name="good" style="margin-top: 5em;">Next</button>
+      <div class="bottom">
+        <button  id="GoToPlayers" type="button" name="good">Next</button>
+      </div>
     </section>
 
     <section id="jugadors" class="menu-hidden">
-      <h2>¿Cómo os llamais?</h2>
-      <div id="linea"></div>
-      <button onclick="Play();" type="button" name="good" style="margin-top: 5em;">Play</button>
-      <button onclick="Back1();" type="button" name="bad">Back</button>
+      <div>
+        <h2>¿Cómo os llamais?</h2>
+        <div id="linea"></div>
+      </div>
+      <div class="bottom">
+        <button id="GoToGame" type="button" name="good">Play</button>
+        <button id="BackToOptions" type="button" name="bad">Back</button>
+      </div>
     </section>
 
     <section id="game" class="menu-hidden">
-      <h2 id="jugador-text">Tu</h2>
-      <p id="accio-text"></p>
-      <button onclick="Spin();" type="button" name="good"  style="margin-top: 5em;">Spin</button>
-      <button onclick="SpinImp();" type="button" name="neutral">Imposible</button>
-      <button onclick="Back2();" type="button" name="bad">Back</button>
+      <div>
+        <h2 id="jugador-text">Tu</h2>
+        <p id="accio-text"></p>
+      </div>
+      <div class="bottom">
+        <button id="Spin" type="button" name="good" >Spin</button>
+        <button id="SpinImp" type="button" name="neutral">Imposible</button>
+        <button id="Back2" type="button" name="bad">Back</button>
+      </div>
     </section>
-<script type="text/javascript" src="script.js"></script>
+    
+    <script type="module" src="Game.js"></script>
+    <script type="module" src="Player.js"></script>
+    <script type="module" src="Round.js"></script>
+    <script type="module" src="Turn.js"></script>
+    <script type="module" src="main.js"></script>  
+
 </body></html>

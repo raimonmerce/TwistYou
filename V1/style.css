@@ -56,7 +56,7 @@ button[name="bad"]{
 }
 
 button{
-  margin-bottom: 1.5em;
+  margin: 0.5em;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.5em;
@@ -67,10 +67,9 @@ button{
   padding: 0.75em 2em;
   color: #ffffff;
   transition: all 50ms ease-out;
-  width: 100%;
 }
 
-.dropdown{
+.likebutton{
   margin: 0.5em auto 0;
   display: inline-block;
   text-transform: uppercase;
@@ -82,13 +81,11 @@ button{
   transition: all 50ms ease-out;
   border: solid #3498DB medium;
   text-align: center;
-  width: 20em;
 }
 
 
 section{
-  min-height: 30em;
-  max-height: 80em;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -107,57 +104,27 @@ section{
   letter-spacing: 0;
 }
 
+.fletxa{
+  background-color: transparent !important;
+  color: black;
+  opacity: 0.8;
+  box-shadow: none !important;
+  padding: 0.25em 0.5em;
+  font-size: 2em;
+  transform-origin: center center;
+  border: #1a53ff  thin;
+  letter-spacing: 0;
+  border-radius: 0;
+  margin: 0;
+}
+.fletxa:hover{
+  transform: scale(1.5);
+}
+#jugador-text{
+  font-size: 1.5em;
+  font-weight: normal;
+}
 #accio-text{
   font-size: 2em;
   font-weight: lighter;
-}
-.bottom{
-  align-items: center; 
-  width: 100%;
-  position: absolute;
-  border: 1em;
-  bottom: 2em;
-}
-
-.switch{
-  font-size: 1.5em;
-}
-
-/* Hide the default checkbox */
-.switch input[type="checkbox"] {
-  display: none;
-}
-
-/* Style the slider (switch) */
-.switch .slider {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  background-color: #ccc;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-/* Style the slider (switch) when checked */
-.switch input[type="checkbox"]:checked + .slider {
-  background-color: #007bff;
-}
-
-/* Style the slider (switch) knob */
-.switch .slider::before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border-radius: 50%;
-  transition: transform 0.3s;
-}
-
-/* Move the slider (switch) knob to the right when checked */
-.switch input[type="checkbox"]:checked + .slider::before {
-  transform: translateX(20px);
 }
