@@ -81,6 +81,10 @@ export default class Turn {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
+  getRandomNumber(str) {
+    return Math.floor(Math.random() * (maxDrinks - 2) + 2);
+  }
+
   getFullSentence(text){
     if (text.includes("$num")){
       let num = Math.floor(Math.random() * maxDrinks);
