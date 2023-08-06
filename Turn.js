@@ -81,15 +81,12 @@ export default class Turn {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  getRandomNumber(str) {
-    return Math.floor(Math.random() * (maxDrinks - 2) + 2);
+  getRandomNumber() {
+    return Math.floor(Math.random() * (maxDrinks - 1) + 2);
   }
 
   getFullSentence(text){
-    if (text.includes("$num")){
-      let num = Math.floor(Math.random() * maxDrinks);
-      text = text.replace("$num", num);
-    }
+    if (text.includes("$num"))text = text.replace("$num", getRandomNumber());
     if (text.includes("$selfPlayer")) text = text.replace("$selfPlayer", this.player.getName());
     if (text.includes("$otherPlayer")) text = text.replace("$otherPlayer", this.getRandomPlayer());
     if (text.includes("$part")) text = text.replace("$part", this.getRandomPart());
