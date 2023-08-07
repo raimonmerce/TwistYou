@@ -1,64 +1,30 @@
 import Player from './Player.js';
 
-
-const generalTasks = [
-  "Libera una parte del cuerpo",
-  "Baila hasta tu próximo turno",
-  "Todos tocan $part de $selfPlayer con $part2 "
-]
-
-const alcoholTasks = [
-  "Bebe un trago",
-  "Bebe $num tragos",
-  "Dale un trago a $otherPlayer",
-  "Dale $num tragos a $otherPlayer",
-  "Todos beben un trago",
-  "Todos beben $num tragos"
-]
-
-const extremeTasks = [
-  "Besa $part de $otherPlayer",
-  "Muerde $part de $otherPlayer",
-  "Estruja $extremePart de $otherPlayer",
-  "Pico a $otherPlayer",
-  "Finge un orgasmo",
-  "Todos fingen orgasmo a la vez"
-]
-
-const generalParts = [
-  "mano derecha",
-  "mano izquierda",
-  "pie derecho",
-  "pie izquierdo",
-  "rodilla derecha",
-  "rodilla izquierda",
-  "cabeza"
-]
-
-const extremeParts = [
-  "pecho",
-  "culo",
-  "genitales"
-]
-
 const maxDrinks = 3;
 
 export default class Turn {
-  constructor(options, player, players) {
+  constructor(options, player, players, translator) {
     this.options = options;
     this.player = player;
     this.players = players;
+    this.translator = translator;
 
-    this.tasks = generalTasks
-    this.parts = generalParts
+    this.generalTasks = translator.translate("generalTasks")
+    this.alcoholTasks = translator.translate("alcoholTasks")
+    this.extremeTasks = translator.translate("extremeTasks")
+    this.generalParts = translator.translate("generalParts")
+    this.extremeParts = translator.translate("extremeParts")
+
+    this.tasks = this.generalTasks
+    this.parts = this.generalParts
 
     if (options["checkAlcohol"]){
-      this.tasks = [...this.tasks, ...alcoholTasks];
+      this.tasks = [...this.tasks, ...this.alcoholTasks];
     }
 
     if (options["checkExtreme"]){
-      this.tasks = [...this.tasks, ...extremeTasks];
-      this.parts = [...this.parts, ...extremeParts];
+      this.tasks = [...this.tasks, ...this.extremeTasks];
+      this.parts = [...this.parts, ...this.extremeParts];
     }
   }
 
@@ -68,7 +34,7 @@ export default class Turn {
   }
 
   getRandomExtremePart(){
-    let it = Math.floor(Math.random() * extremeParts.length)
+    let it = Math.floor(Math.random() * this.extremeParts.length)
     return this.extremeParts[it]
   }
 
@@ -98,11 +64,11 @@ export default class Turn {
   generateText(){
     let text = "text"
     if (Math.floor(Math.random() * 2) == 0){
-      text = this.getRandomPart() + " a " + this.getRandomPart() + " de " + this.getRandomPlayer()
+      text = this.translator.translate("basicTask") 
     } else {
-      text = this.tasks[Math.floor(Math.random() * this.tasks.length)];
-      text = this.getFullSentence(text);     
+      text = this.tasks[Math.floor(Math.random() * this.tasks.length)]; 
     }
+    text = this.getFullSentence(text);
     text = this.capitalizeFirstLetter(text)
 
     return text

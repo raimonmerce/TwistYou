@@ -1,7 +1,7 @@
 import Turn from './Turn.js';
 
 export default class Game {
-  constructor(options, players, numberRounds) {
+  constructor(options, players, numberRounds, translator) {
     this.options = options;
     this.players = players;
     this.currentPlayer = null;
@@ -10,6 +10,7 @@ export default class Game {
     this.iterator = 0;
     this.round = 1;
     this.turn = null;
+    this.translator = translator;
   }
 
   startGame(){
@@ -30,7 +31,7 @@ export default class Game {
     let playersTmp = Array.from(this.players)
     playersTmp.splice(this.iterator, 1);
     document.getElementById('jugador-text').innerHTML = this.currentPlayer.getName()
-    this.turn = new Turn(this.options,  this.currentPlayer, playersTmp);
+    this.turn = new Turn(this.options,  this.currentPlayer, playersTmp, this.translator);
     document.getElementById('accio-text').innerHTML = this.turn.generateText()
     ++this.iterator;
   }

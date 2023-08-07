@@ -14,44 +14,59 @@
   <header><h1>TwistYou</h1></header>
     <section id="options" class="top-section">
       <div>
-        <h2 style="border-top: 100%;">Opciones</h2>
+        <h2 style="border-top: 100%;" lng-tag="options"></h2>
         <div>
+          <label class="switch" lng-tag="alcohol">
+
+          </label>
+
           <label class="switch">
-            Alcohol
             <input type="checkbox" id="checkAlcohol">
             <span class="slider"></span>
           </label>
 
+          <label class="switch" lng-tag="extreme" style="margin-left: 0.5em;">
+
+          </label>
+
           <label class="switch">
-            Extreme
             <input type="checkbox" id="checkExtreme">
             <span class="slider"></span>
           </label>
         </div>
-
-        <h2>Jugadores</h2>
-        <select id="mode-select" name="modes" class="dropdown">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select>
+        <div>
+          <h2 lng-tag="players"></h2>
+          <select id="mode-select" name="modes" class="dropdown">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </div>
+        <div>
+          <h2 lng-tag="lenguage"></h2>
+          <select name="language-picker-select" id="language-picker-select" class="dropdown">
+            <option value="cat" lng-tag="catalan"></option>
+            <option value="esp" lng-tag="spanish" selected></option>
+            <option value="eng" lng-tag="english"></option>
+          </select>
+        </div>
       </div>
     </section>
 
     <section id="jugadors" class="menu-hidden top-section">
       <div>
-        <h2>¿Cómo os llamais?</h2>
+        <h2 lng-tag="whatname"></h2>
         <div id="linea"></div>
       </div>
     </section>
 
     <section id="game" class="menu-hidden top-section">
       <div>
-        <h2 id="jugador-text">Tu</h2>
+        <h2 id="jugador-text"></h2>
         <p id="accio-text"></p>
       </div>
 
@@ -59,22 +74,21 @@
 
     <footer>
       <section id="optionsf">
-        <button  id="GoToPlayers" type="button" name="good">Next</button>
+        <button  id="GoToPlayers" type="button" name="good" lng-tag="next"></button>
       </section>
       <section id="jugadorsf" class="menu-hidden">
-        <button id="GoToGame" type="button" name="good">Play</button>
-        <button id="BackToOptions" type="button" name="bad">Back</button>
+        <button id="GoToGame" type="button" name="good" lng-tag="play"></button>
+        <button id="BackToOptions" type="button" name="bad" lng-tag="back"></button>
       </section>
       <section id="gamef" class="menu-hidden">
-        <button id="Spin" type="button" name="good" >Spin</button>
-        <button id="SpinImp" type="button" name="neutral">Imposible</button>
-        <button id="Back2" type="button" name="bad">Back</button>
+        <button id="Spin" type="button" name="good" lng-tag="spin" ></button>
+        <button id="SpinImp" type="button" name="neutral" lng-tag="impossible"></button>
+        <button id="Back2" type="button" name="bad" lng-tag="back"></button>
       </section>
     </footer>
     
     <script type="module" src="Game.js"></script>
     <script type="module" src="Player.js"></script>
-    <script type="module" src="Round.js"></script>
     <script type="module" src="Turn.js"></script>
     <script type="module" src="main.js"></script>  
 

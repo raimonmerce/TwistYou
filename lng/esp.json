@@ -1,0 +1,58 @@
+{
+    "alcohol" : "Alcohol",
+    "extreme" : "Extremo",
+    "players" : "Jugadores",
+    "player" : "Jugador",
+    "options" : "Opciones",
+    "whatname" : "¿Como os llamais?",
+    "next" : "Siguiente",
+    "play" : "Jugar",
+    "back" : "Atras",
+    "impossible" : "Imposible",
+    "spin" : "Gira",
+    "lenguage" : "Idioma",
+    "catalan" : "Catalán",
+    "spanish" : "Español",
+    "english" : "Ingles",
+    "basicTask" : "$part a $part2 de $otherPlayer",
+    "generalTasks" : [
+        "Libera una parte del cuerpo",
+        "Baila hasta tu próximo turno",
+        "Todos tocan $part de $selfPlayer con $part2 "
+    ],
+    
+    "alcoholTasks" : [
+        "Bebe un trago",
+        "Bebe $num tragos",
+        "Dale un trago a $otherPlayer",
+        "Dale $num tragos a $otherPlayer",
+        "Todos beben un trago",
+        "Todos beben $num tragos"
+    ],
+    
+    "extremeTasks" : [
+        "Besa $part de $otherPlayer",
+        "Muerde $part de $otherPlayer",
+        "Estruja $extremePart de $otherPlayer",
+        "Pico a $otherPlayer",
+        "Finge un orgasmo",
+        "Todos fingen orgasmo a la vez"
+    ],
+    
+    "generalParts" : [
+        "mano derecha",
+        "mano izquierda",
+        "pie derecho",
+        "pie izquierdo",
+        "rodilla derecha",
+        "rodilla izquierda",
+        "cabeza"
+    ],
+    
+    "extremeParts" : [
+        "pecho",
+        "culo",
+        "genitales"
+    ]
+      
+}

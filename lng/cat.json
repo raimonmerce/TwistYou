@@ -1,0 +1,59 @@
+{
+    "alcohol" : "Alcohol",
+    "extreme" : "Extrem",
+    "players" : "Jugadors",
+    "player" : "Jugador",
+    "options" : "Opcions",
+    "whatname" : "Como us dieu?",
+    "next" : "Següent",
+    "play" : "Jugar",
+    "back" : "Endarrere",
+    "impossible" : "Impossible",
+    "spin" : "Gira",
+    "lenguage" : "Idioma",
+    "catalan" : "Català",
+    "spanish" : "Castellà",
+    "english" : "Anglès",
+    "basicTask" : "$part a $part2 de $otherPlayer",
+
+    "generalTasks" : [
+        "Allibera una part del cos",
+        "Balla fins el teu proxim torn",
+        "Tots toquen $part de $selfPlayer amb $part2 "
+    ],
+    
+    "alcoholTasks" : [
+        "Beu un cop",
+        "Beu $num cops",
+        "Donali de beure un cop a $otherPlayer",
+        "Donali de beure $num cops a $otherPlayer",
+        "Tots beuen un cop",
+        "Tots beuen $num cops"
+    ],
+    
+    "extremeTasks" : [
+        "Fes un petò a $part de $otherPlayer",
+        "Mossega $part de $otherPlayer",
+        "Apreta $extremePart de $otherPlayer",
+        "Peto a $otherPlayer",
+        "Fingeix un orgasme",
+        "Tots fingeixen un orgasme a la vegada"
+    ],
+    
+    "generalParts" : [
+        "ma dreta",
+        "ma esquerra",
+        "peu dret",
+        "peu esquerre",
+        "genoll dret",
+        "genoll esquerre",
+        "cap"
+    ],
+    
+    "extremeParts" : [
+        "pit",
+        "cul",
+        "genitals"
+    ]
+      
+}
